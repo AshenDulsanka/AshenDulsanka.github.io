@@ -10,6 +10,8 @@ body{
     color: #fff;
 }
 
+/* ------------- header starts here --------------- */
+
 #header{
     width: 100%;
     height: 100vh;
@@ -74,3 +76,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #00FF57;
 }
+/* ---------------- header ends here --------------- */
+
+/* ---------------- about starts here --------------- */
+
