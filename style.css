@@ -177,3 +177,9 @@ nav ul li a:hover::after{
     display: block;
 }
 
+.subtitleh2{
+    font-size: 30px;
+    font-weight: 540;
+    padding: 30px 0 0;
+    color: #fff;
+}
