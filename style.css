@@ -312,4 +312,12 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #1a1919;
+    margin-top: 20px;
+}
 /*-------------------- contact ends here ------------------*/
