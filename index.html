@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <link rel="icon" href="images/favicon.ico">
     <script src="https://kit.fontawesome.com/ba5e69c837.js" crossorigin="anonymous"></script>
     <title>Ashen Abeysekara</title>
@@ -23,7 +24,9 @@
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark"></i>
                 </ul>
+                <i class="fa-solid fa-bars"></i>
             </nav>
             <div class="header-text">
                 <p>Cyber Security Engineer & Ethical Hacker</p>
@@ -48,14 +51,28 @@
                         engineer/researcher.
                     </p>
 
-                    <div class="tabtitle">
-                        <p class="tablink activelink">Education</p>
+                    <div class="tabtitles">
+                        <p class="tablinks activelink" onclick="opentab('education')">Education</p>
+                        <p class="tablinks" onclick="opentab('clubs')">Clubs & Societies</p>
                     </div>
-                    <div class="tabcontent">
+                    <div class="tabcontents activeTab" id="education">
                         <ul>
                             <li><span>BSc (Hons) Computer Security</span><br>University of Plymouth</li>
                             <li><span>Foundation Programme for Bachelor's Degree</span><br>NSBM Green University</li>
                             <li><span>GCE Ordinary Level</span><br>DS Senanayake College</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents" id="clubs">
+                        <ul>
+                            <li>
+                                <span>CSSL GenZ Chapter of NSBM Green University</span><br>Assistant Secretary of Events
+                                <ul>
+                                    <li>Organized and coordinated events, including networking sessions and workshops.<br>
+                                    Contributed to the club’s recognition as a top university club within its first year.<br>
+                                    Demonstrated strong event planning, management, and coordination skills.<br>
+                                    Gained experience in hybrid event formats.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

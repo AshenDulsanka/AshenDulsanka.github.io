@@ -109,12 +109,12 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
-.tabtitle{
+.tabtitles{
     display: flex;
-    margin: 20px 0 30px;
+    margin: 20px 0 40px;
 }
 
-.tablink{
+.tablinks{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -122,7 +122,7 @@ nav ul li a:hover::after{
     position: relative;
 }
 
-.tablink::after{
+.tablinks::after{
     content: '';
     width: 0;
     height: 3px;
@@ -132,8 +132,8 @@ nav ul li a:hover::after{
     bottom: -8px;
 }
 
-.tablink.activelink::after{
-    width: 100%;
+.tablinks.activelink::after{
+    width: 50%;
     transition: 0.5s;
 }
 
@@ -142,16 +142,23 @@ nav ul li a:hover::after{
     font-size: 17px;
 }
 
-.tabcontent ul li{
+.tabcontents ul li{
     list-style: none;
     margin: 20px 0;
 }
 
-.tabcontent ul li span{
+.tabcontents ul li span{
     color: #00FF57;
-    font-size: 16px;
+    font-size: 20px;
 }
 
+.tabcontents{
+    display: none;
+}
+
+.tabcontents.activeTab{
+    display: block;
+}
 /*--------------------- about ends here ----------------*/
 
 /*---------------- projects starts here --------------------*/
@@ -325,6 +332,10 @@ form .btn2{
 
 /*--------------- responsive starts here --------------*/
 
+nav .fas{
+    display: none;
+}
+
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/mobile.jpg);
@@ -335,7 +346,6 @@ form .btn2{
     }
     .header-text h1{
         font-size: 30px;
-
     }
 }
 
