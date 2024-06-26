@@ -14,26 +14,26 @@ function opentab(tabname){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var upcomingProjects = document.querySelectorAll('#upcomingProjects .project');
-    var seeMoreBtn = document.getElementById('seeMoreBtn');
-    var seeLessBtn = document.createElement('button');
-    seeLessBtn.id = 'seeLessBtn';
-    seeLessBtn.className = 'btn';
-    seeLessBtn.textContent = 'See Less';
-    seeLessBtn.style.display = 'none';
-    seeMoreBtn.parentNode.insertBefore(seeLessBtn, seeMoreBtn.nextSibling);
+    var upcomingProjects = document.querySelectorAll('#upcomingProjects .project')
+    var seeMoreBtn = document.getElementById('seeMoreBtn')
+    var seeLessBtn = document.createElement('button')
+    seeLessBtn.id = 'seeLessBtn'
+    seeLessBtn.className = 'btn'
+    seeLessBtn.textContent = 'See Less'
+    seeLessBtn.style.display = 'none'
+    seeMoreBtn.parentNode.insertBefore(seeLessBtn, seeMoreBtn.nextSibling)
 
     function toggleProjects(show) {
         upcomingProjects.forEach(function(project, index) {
             if (show) {
-                project.classList.remove('hidden');
+                project.classList.remove('hidden')
                 setTimeout(() => {
-                    project.classList.remove('visuallyHidden');
-                }, 20);
+                    project.classList.remove('visuallyHidden')
+                }, 20)
             } else if (index >= 3) {
-                project.classList.add('visuallyHidden');
+                project.classList.add('visuallyHidden')
                 project.addEventListener('transitionend', function(e) {
-                    project.classList.add('hidden');
+                    project.classList.add('hidden')
                 }, {
                     capture: false,
                     once: true,
@@ -41,18 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-        seeMoreBtn.style.display = show ? 'none' : 'block';
-        seeLessBtn.style.display = show ? 'block' : 'none';
+        seeMoreBtn.style.display = show ? 'none' : 'block'
+        seeLessBtn.style.display = show ? 'block' : 'none'
     }
 
-    // Initially hide extra projects
     upcomingProjects.forEach((project, index) => {
         if (index >= 3) {
-            project.classList.add('hidden');
-            project.classList.add('visuallyHidden');
+            project.classList.add('hidden')
+            project.classList.add('visuallyHidden')
         }
     });
 
-    seeMoreBtn.addEventListener('click', () => toggleProjects(true));
-    seeLessBtn.addEventListener('click', () => toggleProjects(false));
-});
+    seeMoreBtn.addEventListener('click', () => toggleProjects(true))
+    seeLessBtn.addEventListener('click', () => toggleProjects(false))
+})
