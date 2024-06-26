@@ -245,3 +245,71 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #00FF57;
 }
+
+/*--------------------- projects ends here ----------------*/
+
+/*--------------------- contact starts here ----------------*/
+
+.contactLeft{
+    flex-basis: 35%;
+}
+.contactRight{
+    flex-basis: 60%;
+}
+
+.contactLeft p{
+    margin-top: 30px;
+}
+
+.contactLeft p i{
+    color: #00FF57;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socialIcons{
+    margin-top: 30px;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socialIcons a:hover{
+    color: #00FF57;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #00ff55be;
+}
+
+.contactRight form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*-------------------- contact ends here ------------------*/
