@@ -356,10 +356,11 @@ nav .fas{
         position: fixed;
         top: 0;
         right: -200px;
-        width: 200px;
+        width: 150px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
@@ -370,6 +371,29 @@ nav .fas{
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col1, .about-col2{
+        flex-basis: 100%;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 14px;
+    }
+    .tablinks{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contactLeft, .contactRight{
+        flex-basis: 100%;
+    }
+    .tabcontents ul li span{
+        color: #00FF57;
+        font-size: 17px;
     }
 }
 
