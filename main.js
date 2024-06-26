@@ -13,3 +13,18 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("activeTab")
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    var upcomingProjects = document.querySelectorAll('#upcomingProjects .project');
+    var seeMoreBtn = document.getElementById('seeMoreBtn');
+
+    for (var i = 3; i < upcomingProjects.length; i++) {
+        upcomingProjects[i].classList.add('hidden');
+    }
+
+    seeMoreBtn.addEventListener('click', function() {
+        upcomingProjects.forEach(function(project) {
+            project.classList.remove('hidden');
+        });
+        seeMoreBtn.style.display = 'none'; 
+    });
+});
