@@ -18,19 +18,19 @@
         <div class="container">
             <nav>
                 <img src="images/nametag.png" alt="name" class="logo">
-                <ul> 
+                <ul id="sidebar"> 
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Me</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Contact Me</a></li>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Cyber Security Engineer & Ethical Hacker</p>
                 <h1>Hello there, I'm <span>Ashen</span> Abeysekara</h1>
+                <p>Cyber Security Engineer & Ethical Hacker</p>
             </div>
         </div>
     </div>
@@ -262,5 +262,15 @@
 
     <!--------------- contact ends here --------------->
 
+    <script>
+        var sidebar = document.getElementById("sidebar");
+
+        function openmenu() {
+            sidebar.style.right = "0";
+        }
+        function closemenu() {
+            sidebar.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
