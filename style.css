@@ -84,7 +84,13 @@ nav ul li a:hover::after{
 }
 
 .row.head{
-    margin: 0 450px;
+    margin: 0 500px;
+}
+
+.btn.cv{
+    padding: 14px 60px;
+    font-size: 20px;
+    cursor: pointer;
 }
 /* ---------------- header ends here --------------- */
 
@@ -166,6 +172,47 @@ nav ul li a:hover::after{
 }
 
 .tabcontents.activeTab{
+    display: block;
+}
+
+.tabcontents1 ul li.headline.cert{
+    color: #dbdf23;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    list-style: none;
+}
+
+.tabcontents1 ul li.headline.cert a{
+    text-decoration: underline;
+    color: #dbdf23;
+}
+
+.tabcontents1 ul li.subline{
+    margin: 10px 0 -7px;
+}
+
+.tabcontents1 ul li.subline.tab{
+    margin-left: 10px;
+}
+
+.tabcontents1 ul li{
+    margin: 10px 0;
+}
+
+.tabcontents1 ul li span{
+    color: #00FF57;
+    font-size: 18px;
+}
+
+.tabcontents1 ul li a{
+    text-decoration: none;
+}
+
+.tabcontents1{
+    display: none;
+}
+
+.tabcontents1.activeTab{
     display: block;
 }
 /*--------------------- about ends here ----------------*/
@@ -397,7 +444,7 @@ nav .fas{
         background-image: url(images/mobile.jpg);
     }
     .header-text{
-        margin-top: 75%;
+        margin-top: 65%;
         font-size: 16px;
     }
     .header-text h1{
@@ -451,6 +498,13 @@ nav .fas{
         color: #00FF57;
         font-size: 17px;
     }
+    .tabcontents1 ul li span{
+        color: #00FF57;
+        font-size: 15px;
+    }
+    .tabcontents1 ul li.subline.cert{
+        margin-bottom: -10px;
+    }
     .projectList{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -471,8 +525,11 @@ nav .fas{
         text-align: center;
     }
     .row.head{
-        margin: 0;
+        margin: 0px;
         display: inline;
+    }
+    .btn.cv.res{
+        margin-top: -20px;
     }
 }
 

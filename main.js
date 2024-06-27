@@ -1,9 +1,12 @@
 const tablinks = document.getElementsByClassName("tablinks")
 const tabcontents = document.getElementsByClassName("tabcontents")
+const tabcontents1 = document.getElementsByClassName("tabcontents1")
 const form = document.querySelector('form')
 const fullName = document.getElementById('name')
 const email = document.getElementById('email')
 const msg = document.getElementById('message')
+
+// function to open tab
 
 function opentab(tabname){
     for(tablink of tablinks){
@@ -12,10 +15,15 @@ function opentab(tabname){
     for(tabcontent of tabcontents){
         tabcontent.classList.remove("activeTab")
     }
+    for(tabcontent1 of tabcontents1){
+        tabcontent1.classList.remove("activeTab")
+    }
 
     event.currentTarget.classList.add("activelink")
     document.getElementById(tabname).classList.add("activeTab")
 }
+
+// seemore and seeless button functionality of projects
 
 document.addEventListener('DOMContentLoaded', function() {
     const upcomingProjects = document.querySelectorAll('#upcomingProjects .project')
@@ -60,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
     seeLessBtn.addEventListener('click', () => toggleProjects(false))
 })
 
+// function to send contact form data to email
+
 function sendEmail() {
     const bodyMsg = `
             <html>
@@ -84,9 +94,7 @@ function sendEmail() {
         `
 
     Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "ashendul@gmail.com",
-        Password: "17762589A0D9B16CDA65392987AA4F105DBB",
+        SecureToken: "f6c65517-0511-47b7-835d-d507ae901029",
         Port: 2525,
         To: 'ashendul@gmail.com',
         From: "ashendul@gmail.com",
@@ -112,8 +120,13 @@ function sendEmail() {
     );
 }
 
+// event listener for form submission
+
 form.addEventListener('submit', function(e) {
     e.preventDefault()
 
     sendEmail()
 })
+
+//skills section
+
