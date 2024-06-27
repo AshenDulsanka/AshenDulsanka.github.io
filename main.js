@@ -1,5 +1,9 @@
-var tablinks = document.getElementsByClassName("tablinks")
-var tabcontents = document.getElementsByClassName("tabcontents")
+const tablinks = document.getElementsByClassName("tablinks")
+const tabcontents = document.getElementsByClassName("tabcontents")
+const form = document.querySelector('form')
+const fullName = document.getElementById('name')
+const email = document.getElementById('email')
+const msg = document.getElementById('message')
 
 function opentab(tabname){
     for(tablink of tablinks){
@@ -14,9 +18,9 @@ function opentab(tabname){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var upcomingProjects = document.querySelectorAll('#upcomingProjects .project')
-    var seeMoreBtn = document.getElementById('seeMoreBtn')
-    var seeLessBtn = document.createElement('button')
+    const upcomingProjects = document.querySelectorAll('#upcomingProjects .project')
+    const seeMoreBtn = document.getElementById('seeMoreBtn')
+    const seeLessBtn = document.createElement('button')
     seeLessBtn.id = 'seeLessBtn'
     seeLessBtn.className = 'btn'
     seeLessBtn.textContent = 'See Less'
@@ -57,6 +61,28 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function sendEmail() {
+    const bodyMsg = `
+            <html>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <h2 style="color: #4a4a4a;">New Portfolio Message</h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Name:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${fullName.value}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Email:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${email.value}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Message:</strong></td>
+                        <td style="padding: 10px;">${msg.value}</td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+        `
+
     Email.send({
         Host: "smtp.elasticemail.com",
         Username: "ashendul@gmail.com",
@@ -65,28 +91,29 @@ function sendEmail() {
         To: 'ashendul@gmail.com',
         From: "ashendul@gmail.com",
         Subject: "New Portfolio Message",
-        Body: `
-            <html>
-            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-                <h2 style="color: #4a4a4a;">New Portfolio Message</h2>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Name:</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${document.getElementById("name").value}</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Email:</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${document.getElementById("email").value}</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;"><strong>Message:</strong></td>
-                        <td style="padding: 10px;">${document.getElementById("message").value}</td>
-                    </tr>
-                </table>
-            </body>
-            </html>
-        `
+        Body: bodyMsg
     }).then(
-        message => alert(message)
+        message => {
+            if (message === 'OK') {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message Sent Successfully!",
+                    icon: "success"
+                  });
+            }
+            else {
+                Swal.fire({
+                    title: "Error!",
+                    text: "Something went wrong! Please try again.",
+                    icon: "error"
+                  });
+            }
+        }
     );
 }
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
+
+    sendEmail()
+})
