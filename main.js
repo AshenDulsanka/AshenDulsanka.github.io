@@ -55,3 +55,38 @@ document.addEventListener('DOMContentLoaded', function() {
     seeMoreBtn.addEventListener('click', () => toggleProjects(true))
     seeLessBtn.addEventListener('click', () => toggleProjects(false))
 })
+
+function sendEmail() {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "ashendul@gmail.com",
+        Password: "17762589A0D9B16CDA65392987AA4F105DBB",
+        Port: 2525,
+        To: 'ashendul@gmail.com',
+        From: "ashendul@gmail.com",
+        Subject: "New Portfolio Message",
+        Body: `
+            <html>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                <h2 style="color: #4a4a4a;">New Portfolio Message</h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Name:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${document.getElementById("name").value}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Email:</strong></td>
+                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${document.getElementById("email").value}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>Message:</strong></td>
+                        <td style="padding: 10px;">${document.getElementById("message").value}</td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+        `
+    }).then(
+        message => alert(message)
+    );
+}

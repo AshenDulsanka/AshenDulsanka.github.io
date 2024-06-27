@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
     <link rel="icon" href="images/favicon.ico">
-    <script src="https://kit.fontawesome.com/ba5e69c837.js" crossorigin="anonymous"></script>
     <title>Ashen Abeysekara</title>
 </head>
 
@@ -247,10 +245,10 @@
                     <a href="assets/Ashen Abeysekara.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contactRight">
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name" class="formInput" required>
-                        <input type="email" name="email" placeholder="Your Email" class="formInput" required>
-                        <textarea name="message" rows="6" placeholder="Your Message" class="formInput" required></textarea>
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <input type="text" name="name" id="name" placeholder="Your Name" class="formInput" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" class="formInput" required>
+                        <textarea name="message" id="message" rows="6" placeholder="Your Message" class="formInput" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -264,6 +262,7 @@
 
     <!--------------- contact ends here --------------->
 
+    <script src="main.js"></script>
     <script>
         var sidebar = document.getElementById("sidebar");
 
@@ -274,5 +273,7 @@
             sidebar.style.right = "-200px";
         }
     </script>
+    <script src="https://kit.fontawesome.com/ba5e69c837.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
