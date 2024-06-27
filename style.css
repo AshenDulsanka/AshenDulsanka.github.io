@@ -369,6 +369,16 @@ form .btn2{
     background: #1a1919;
     margin-top: 20px;
 }
+
+.formInput{
+    transition: transform 0.5s;
+}
+
+.formInput:hover{
+    transform: translate(0, -5px);
+    border: 1px solid #00FF57;
+}
+
 /*-------------------- contact ends here ------------------*/
 
 /*--------------- responsive starts here --------------*/
