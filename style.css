@@ -525,7 +525,7 @@ form .btn2{
 }
 
 .skillBar .bar .linux{
-    width: 60%;
+    width: 70%;
     animation: linux 2s;
 }
 
@@ -533,12 +533,12 @@ form .btn2{
     0%{
         width: 0%;
     }100%{
-        width: 60%;
+        width: 70%;
     }
 }
 
 .skillBar .bar .pentest{
-    width: 10%;
+    width: 30%;
     animation: pentest 2s;
 }
 
@@ -546,7 +546,7 @@ form .btn2{
     0%{
         width: 0%;
     }100%{
-        width: 10%;
+        width: 30%;
     }
 }
 /*----------------- skills ends here ---------------*/
@@ -557,9 +557,235 @@ nav .fas{
     display: none;
 }
 
+@media only screen and (max-width: 1570px){
+    .row.head{
+        margin: 10px;
+        display: inline;
+    }
+    .btn.cv.res{
+        margin-top: -20px;
+    }
+}
+
 @media only screen and (max-width: 1300px){
     #home{
         background-image: url(images/background1.jpg);
+    }
+    .header-text{
+        font-size: 25px;
+    }
+    .header-text h1{
+        font-size: 50px;
+        padding-top: 5%;
+    }
+    .subtitle{
+        font-size: 50px;
+    }
+    .layer h3{
+        margin-bottom: 10px;
+    }
+    .layer a{
+        margin-top: 5px;
+        color: #00FF57;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 35px;
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .skillMain{
+        margin-bottom: 130px;
+        margin-left: 2px;
+        width: 100%;
+    }
+    .row.head{
+        margin: 0px;
+        display: inline;
+    }
+    .btn.cv.res{
+        margin-top: -20px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .topHead{
+        margin-top: 30px;
+    }
+    .header-text{
+        margin-top: 33%;
+        font-size: 24px;
+    }
+    .header-text h1{
+        font-size: 45px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #00FF57;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 14px;
+    }
+    .tablinks{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .tabcontents ul li span{
+        color: #00FF57;
+        font-size: 17px;
+    }
+    .tabcontents1 ul li span{
+        color: #00FF57;
+        font-size: 15px;
+    }
+    .tabcontents1 ul li.subline.cert{
+        margin-bottom: -10px;
+    }
+    .projectList{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .layer h3{
+        margin-bottom: 10px;
+    }
+    
+    .layer a{
+        margin-top: 5px;
+        color: #00FF57;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 35px;
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .row.head{
+        margin: 0px;
+        display: inline;
+    }
+    .btn.cv.res{
+        margin-top: -20px;
+    }
+    .skillMain{
+        margin-bottom: 130px;
+        margin-left: 2px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 867px){
+    .topHead{
+        margin-top: 20px;
+    }
+    .header-text{
+        margin-top: 40%;
+        font-size: 23px;
+    }
+    .header-text h1{
+        font-size: 40px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #00FF57;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .tablinks{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .tabcontents ul li span{
+        color: #00FF57;
+        font-size: 17px;
+    }
+    .tabcontents1 ul li span{
+        color: #00FF57;
+        font-size: 15px;
+    }
+    .tabcontents1 ul li.subline.cert{
+        margin-bottom: -10px;
+    }
+    .projectList{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .layer h3{
+        margin-bottom: 10px;
+    }
+    .layer a{
+        margin-top: 5px;
+        color: #00FF57;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 35px;
+        background: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .row.head{
+        margin: 0px;
+        display: inline;
+    }
+    .btn.cv.res{
+        margin-top: -20px;
+    }
+    .skillMain{
+        margin-bottom: 130px;
+        margin-left: 2px;
+        width: 100%;
     }
 }
 
