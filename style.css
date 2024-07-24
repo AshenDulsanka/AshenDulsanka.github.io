@@ -557,6 +557,12 @@ nav .fas{
     display: none;
 }
 
+@media only screen and (max-width: 1300px){
+    #home{
+        background-image: url(images/background1.jpg);
+    }
+}
+
 @media only screen and (max-width: 600px){
     #home{
         background-image: url(images/mobile.jpg);
@@ -658,5 +664,6 @@ nav .fas{
         width: 100%;
     }
 }
+
 
 /*--------------- responsive ends here --------------*/
