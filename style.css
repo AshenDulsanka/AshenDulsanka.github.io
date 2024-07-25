@@ -323,7 +323,7 @@ nav ul li a:hover::after{
     transform: translateY(20px);
 }
 
-#seeMoreBtn, #seeLessBtn{
+#seeMoreBtn, #seeLessBtn, #seeMoreBtn1, #seeLessBtn1{
     transition: opacity 0.5s ease-in-out;
     margin-top: 20px;
     display: block;
@@ -339,7 +339,7 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 
-#seeMoreBtn:hover, #seeLessBtn:hover{
+#seeMoreBtn:hover, #seeLessBtn:hover, seeMoreBtn1:hover, #seeLessBtn1:hover{
     background: #00FF57;
 }
 

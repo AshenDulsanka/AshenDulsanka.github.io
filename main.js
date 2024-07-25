@@ -68,6 +68,49 @@ document.addEventListener('DOMContentLoaded', function() {
     seeLessBtn.addEventListener('click', () => toggleProjects(false))
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    const completedProjects = document.querySelectorAll('#completedProjects .project')
+    const seeMoreBtn = document.getElementById('seeMoreBtn1')
+    const seeLessBtn = document.createElement('button')
+    seeLessBtn.id = 'seeLessBtn1'
+    seeLessBtn.className = 'btn'
+    seeLessBtn.textContent = 'See Less'
+    seeLessBtn.style.display = 'none'
+    seeMoreBtn.parentNode.insertBefore(seeLessBtn, seeMoreBtn.nextSibling)
+
+    function toggleProjects(show) {
+        completedProjects.forEach(function(project, index) {
+            if (show) {
+                project.classList.remove('hidden')
+                setTimeout(() => {
+                    project.classList.remove('visuallyHidden')
+                }, 20)
+            } else if (index >= 3) {
+                project.classList.add('visuallyHidden')
+                project.addEventListener('transitionend', function(e) {
+                    project.classList.add('hidden')
+                }, {
+                    capture: false,
+                    once: true,
+                    passive: false
+                });
+            }
+        });
+        seeMoreBtn.style.display = show ? 'none' : 'block'
+        seeLessBtn.style.display = show ? 'block' : 'none'
+    }
+
+    completedProjects.forEach((project, index) => {
+        if (index >= 3) {
+            project.classList.add('hidden')
+            project.classList.add('visuallyHidden')
+        }
+    });
+
+    seeMoreBtn.addEventListener('click', () => toggleProjects(true))
+    seeLessBtn.addEventListener('click', () => toggleProjects(false))
+})
+
 // function to send contact form data to email
 
 function sendEmail() {
