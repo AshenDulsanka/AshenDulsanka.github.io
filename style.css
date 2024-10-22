@@ -538,7 +538,7 @@ form .btn2{
 }
 
 .skillBar .bar .pentest{
-    width: 30%;
+    width: 65%;
     animation: pentest 2s;
 }
 
@@ -546,7 +546,7 @@ form .btn2{
     0%{
         width: 0%;
     }100%{
-        width: 30%;
+        width: 65%;
     }
 }
 /*----------------- skills ends here ---------------*/
